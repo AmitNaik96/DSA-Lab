@@ -6,13 +6,13 @@
 char stack[100];
 int top = -1;
 
-//function for pushing an element into a stack
+// function for pushing an element into a stack
 void push(char item)
 {
     stack[++top] = item;
 }
 
-//function for popping an element from the stack
+// function for popping an element from the stack
 char pop()
 {
     return stack[top--];
@@ -60,7 +60,7 @@ int precedence(char symbol)
     }
 }
 
-// converts infix expression to postfix
+// converts infix expression to postfix expression.
 void InfixToPostfix(char infix[], char postfix[])
 {
     int i = 0, j = 0;
@@ -83,7 +83,7 @@ void InfixToPostfix(char infix[], char postfix[])
             {
                 if (symbol == ')')
                 {
-                    while (stack[top] != '(') 
+                    while (stack[top] != '(')
                     {
                         postfix[j] = pop(); // operators sent to postfix.
                         j++;
@@ -114,7 +114,7 @@ void InfixToPostfix(char infix[], char postfix[])
         postfix[j] = pop();
         j++;
     }
-    postfix[j] = '\0'; //null terminate string. 
+    postfix[j] = '\0'; // null terminate string.
 }
 
 int main()

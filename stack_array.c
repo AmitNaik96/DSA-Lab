@@ -58,7 +58,7 @@ void peek()
     printf("The top element of the stack is %d\n",stack[top]);
 }
 
-//function for popping an element from the stack
+//function for display elements from the stack
 void display()
 {
     int i=0;
@@ -85,7 +85,7 @@ int main()
                 scanf("%d",&value);
                 push(value);
                 break;
-        case 2: printf("The popped element is %d",pop());
+        case 2: printf("The popped element is %d\n",pop());
                 break;
         case 3: peek();
                 break;
