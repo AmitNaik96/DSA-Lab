@@ -17,7 +17,7 @@ int pop()
     return stack[top--];
 }
 
-//function to reverse a stack.
+//function to reverse expression.
 void reverse(char* str)
 {
     int i;
@@ -47,8 +47,8 @@ int evaluate(char *prefix)
         }
         else
         {
-            operand2=pop();
             operand1=pop();
+            operand2=pop();
 
             switch (ch)
             {
@@ -71,6 +71,5 @@ int main()
 {
     char prefix[]="*5+12";
     printf("%d",evaluate(prefix));
-    // printf("%d",stack[top]);
     return 0;
 }
